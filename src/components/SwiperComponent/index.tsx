@@ -29,21 +29,10 @@ const SwiperComponent = ({
   initialSlide,
   breakpoints,
 }: SwiperComponentProps) => {
-  const swiperProparities = useMemo(() => {
-    return {
-      pagination: {
-        clickable: pagination,
-      },
-      spaceBetween: spaceBetween,
-      slidesPerView: slidesPerView,
-      initialSlide: initialSlide,
-      breakpoints: breakpoints,
-    };
-  }, [pagination, spaceBetween, slidesPerView, initialSlide, breakpoints]);
-
   return (
     <Swiper
       // navigation={true}
+      pagination={pagination}
       autoplay={{ delay: 3000 }}
       spaceBetween={spaceBetween}
       slidesPerView={slidesPerView}
