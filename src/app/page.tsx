@@ -1,95 +1,60 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+"use client";
+
+import styles from "./page.module.css";
+
+import SwiperComponent from "@/components/SwiperComponent";
+import ImageListComponent from "@/components/ImageList";
+import ElectronicSwiper from "@/components/ElectronicSwiper";
+
+import { Box, Typography, Stack } from "@mui/material";
+
+import ArrowRightIcon from "@/components/SVG/ArrowRight";
 
 export default function Home() {
+  const slides = [
+    "../assets/images/placeholder3.png",
+    "../assets/images/placeholder1.png",
+    "../assets/images/placeholder2.png",
+  ];
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main>
+      <SwiperComponent
+        slides={slides}
+        spaceBetween={120}
+        slidesPerView={3}
+        initialSlide={1}
+      />
+
+      <Box sx={{ px: 20 }}>
+        <Stack
+          direction="row"
+          spacing={{ xs: 1, sm: 2, md: 4 }}
+          justifyContent="space-between"
+        >
+          <Typography variant="h5" component="h2" sx={{ fontSize: 18 }}>
+            Categories
+          </Typography>
+          <Stack
+            direction="row"
+            spacing={{ xs: 1, sm: 2, md: 1 }}
+            alignItems={"center"}
+            sx={{
+              cursor: "pointer",
+            }}
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+            <Typography
+              variant="h5"
+              component="h2"
+              sx={{ fontSize: 16, color: "#554AF0" }}
+            >
+              See all
+            </Typography>
+            <ArrowRightIcon />
+          </Stack>
+        </Stack>
+        <ElectronicSwiper />
+      </Box>
+      <ImageListComponent />
     </main>
-  )
+  );
 }

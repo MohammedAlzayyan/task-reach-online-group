@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
 import Select, { SelectChangeEvent } from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
 import { styled } from "@mui/material/styles";
 import InputBase from "@mui/material/InputBase";
+
+import Item from "./Item";
 
 const ClassNameInput = styled(InputBase)(({ theme }) => ({
   "& .MuiInputBase-input": {
@@ -20,9 +21,7 @@ const ClassNameInput = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const SelectComponent = ({ data }: any) => {
-  const initialSelectedValue = data && data.length >= 2 ? data[1].name : "";
-
+const SelectComponent = ({ children, initialSelectedValue }: any) => {
   const [selected, setSelected] = useState(initialSelectedValue);
 
   const handleChange = (event: SelectChangeEvent) => {
@@ -35,14 +34,11 @@ const SelectComponent = ({ data }: any) => {
       displayEmpty
       input={<ClassNameInput />}
     >
-      {data?.map((item: any, index: number) => (
-        <MenuItem key={index} value={item.name}>
-          <img src={item.flagUrl} alt="flag" />
-          <span>{item.name}</span>
-        </MenuItem>
-      ))}
+      {children}
     </Select>
   );
 };
+
+SelectComponent.Item = Item;
 
 export default SelectComponent;

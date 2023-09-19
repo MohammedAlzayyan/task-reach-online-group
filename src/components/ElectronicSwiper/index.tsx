@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import "./styleTest.css";
+import "./styles.css";
 
 import { Box, Typography } from "@mui/material";
 
@@ -16,9 +16,9 @@ export const TestSwiper = () => {
     "../assets/images/elec1.svg",
     "../assets/images/elec2.svg",
     "../assets/images/elec3.svg",
-    "../assets/images/elec4.svg",
-    "../assets/images/elec4.svg",
-    "../assets/images/elec4.svg",
+    "../assets/images/elec1.svg",
+    "../assets/images/elec2.svg",
+    "../assets/images/elec3.svg",
   ];
   return (
     <Box>
@@ -48,12 +48,11 @@ export const TestSwiper = () => {
           },
         }}
         modules={[Navigation, Pagination]}
-        // className="mySwiper"
         style={{ paddingLeft: "30px", paddingRight: "30px" }}
       >
         {slides2.map((slide, index) => (
           <Box sx={{ px: 20 }} key={index}>
-            <SwiperSlide>
+            <SwiperSlide style={{ transform: "none !important" }}>
               <Box sx={{ flexGrow: 1 }}>
                 <img src={slide} alt={`Slide ${index}`} />
                 <Typography

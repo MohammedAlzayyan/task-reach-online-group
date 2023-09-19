@@ -187,11 +187,37 @@ export default function FirstNavbar() {
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
             <Divider orientation="vertical" variant="middle" flexItem sx={{}} />
 
-            <SelectComponent data={languages} />
+            <SelectComponent initialSelectedValue={languages[0].name}>
+              {languages.map((language) => (
+                <SelectComponent.Item
+                  key={language.name}
+                  value={language.name}
+                  sx={{ display: "flex", alignItems: "center", gap: "10px" }}
+                >
+                  <img
+                    src={language.flagUrl}
+                    alt={language.name}
+                    width="20px"
+                    height="20px"
+                  />
+                  {language.name}
+                </SelectComponent.Item>
+              ))}
+            </SelectComponent>
 
             <Divider orientation="vertical" variant="middle" flexItem />
 
-            <SelectComponent data={currencies} />
+            <SelectComponent initialSelectedValue={currencies[0].name}>
+              {currencies.map((currency) => (
+                <SelectComponent.Item
+                  key={currency.name}
+                  value={currency.name}
+                  sx={{ display: "flex", alignItems: "center", gap: "10px" }}
+                >
+                  {currency.name}
+                </SelectComponent.Item>
+              ))}
+            </SelectComponent>
           </Box>
         </Toolbar>
       </AppBar>
