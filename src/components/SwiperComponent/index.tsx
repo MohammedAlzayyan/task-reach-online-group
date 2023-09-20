@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import "swiper/css";
@@ -9,16 +9,13 @@ import "./style.css";
 
 import { Navigation, Pagination, History } from "swiper/modules";
 
-import { Box } from "@mui/material";
-
 type SwiperComponentProps = {
-  children: React.ReactNode;
   slides: string[];
-  pagination: boolean | any;
+  pagination?: boolean | any;
   spaceBetween: number;
   slidesPerView: number;
   initialSlide?: number;
-  breakpoints: {};
+  breakpoints?: {};
 };
 
 const SwiperComponent = ({
