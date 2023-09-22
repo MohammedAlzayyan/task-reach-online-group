@@ -18,6 +18,7 @@ export default function Home() {
   ];
   return (
     <main>
+      <h1>Test test</h1>
       <SwiperComponent
         slides={slides}
         spaceBetween={120}

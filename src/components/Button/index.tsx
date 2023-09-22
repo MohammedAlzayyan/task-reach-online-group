@@ -1,7 +1,7 @@
 import styled from "@emotion/styled/macro";
 import Button from "@mui/material/Button";
 
-const ButtonComponent = ({ children, classNameButton }: any) => {
+const ButtonComponent = ({ children, classNameButton, onCLick }: any) => {
   const BClassName = styled(Button)`
     &.MuiButton-root {
       background-color: #000;
@@ -27,7 +27,11 @@ const ButtonComponent = ({ children, classNameButton }: any) => {
       }
     }
   `;
-  return <BClassName className={classNameButton}>{children}</BClassName>;
+  return (
+    <BClassName className={classNameButton} onClick={onCLick}>
+      {children}
+    </BClassName>
+  );
 };
 
 export default ButtonComponent;

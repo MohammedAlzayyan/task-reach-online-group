@@ -22,11 +22,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Box sx={{ px: 20 }}>
-          <div>
-            <FirstNavbar />
-            <Divider variant="middle" />
-            <SecondNavbar />
-          </div>
+          <FirstNavbar />
+          <Divider variant="middle" />
+          <SecondNavbar />
         </Box>
 
         {children}
