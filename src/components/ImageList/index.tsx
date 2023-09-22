@@ -26,7 +26,7 @@ const itemData = [
 
 const ImageListComponent = () => {
   return (
-    <Box sx={{ px: 20 }}>
+    <Box sx={{ px: { xs: 5, md: 15 } }}>
       <ImageList
         sx={{}}
         variant="quilted"

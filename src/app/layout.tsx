@@ -20,8 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <Box sx={{ px: 20 }}>
+      <body
+        className={inter.className}
+        style={{ boxSizing: "border-box", margin: 0, padding: 0 }}
+      >
+        <Box sx={{ px: { xs: 0, md: 15 } }}>
           <FirstNavbar />
           <Divider variant="middle" />
           <SecondNavbar />

@@ -48,7 +48,6 @@ export const TestSwiper = () => {
           },
         }}
         modules={[Navigation, Pagination]}
-        style={{ paddingLeft: "30px", paddingRight: "30px" }}
       >
         {slides2.map((slide, index) => (
           <Box sx={{ px: 20 }} key={index}>

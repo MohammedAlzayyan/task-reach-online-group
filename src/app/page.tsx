@@ -1,7 +1,5 @@
 "use client";
 
-import styles from "./page.module.css";
-
 import SwiperComponent from "@/components/SwiperComponent";
 import ImageListComponent from "@/components/ImageList";
 import ElectronicSwiper from "@/components/ElectronicSwiper";
@@ -18,7 +16,6 @@ export default function Home() {
   ];
   return (
     <main>
-      <h1>Test test</h1>
       <SwiperComponent
         slides={slides}
         spaceBetween={120}
@@ -26,7 +23,7 @@ export default function Home() {
         initialSlide={1}
       />
 
-      <Box sx={{ px: 20 }}>
+      <Box sx={{ px: { xs: 5, md: 15 } }}>
         <Stack
           direction="row"
           spacing={{ xs: 1, sm: 2, md: 4 }}

@@ -22,3 +22,16 @@
   width: 100%;
   max-width: 100%;
 }
+
+@media screen and (max-width: 576px) {
+  .swiper-slide {
+    width: 200px;
+    height: 200px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 250px;
+    max-width: 400px;
+  }
+}
