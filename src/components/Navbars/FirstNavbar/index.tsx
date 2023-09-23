@@ -20,6 +20,7 @@ import useMediaQuery from "@mui/material/useMediaQuery"; // Import useMediaQuery
 import Logo from "../../../components/SVG/Logo";
 import SearchBar from "@/components/SearchBar";
 import SelectComponent from "@/components/Select";
+import Image from "next/image";
 
 const pages = ["Home", "Products", "Categories", "Offers", "Contact Us"];
 
@@ -81,7 +82,12 @@ export default function FirstNavbar() {
             }}
           > */}
           <Box sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}>
-            <img src="/assets/images/Logo2.png" alt="logo" />
+            <Image
+              src="/assets/images/Logo2.png"
+              alt="logo"
+              width={48}
+              height={48}
+            />
           </Box>
           <Typography
             variant="h6"
@@ -117,11 +123,11 @@ export default function FirstNavbar() {
                   value={language.name}
                   sx={{ display: "flex", alignItems: "center", gap: "10px" }}
                 >
-                  <img
+                  <Image
                     src={language.flagUrl}
                     alt={language.name}
-                    width="20px"
-                    height="20px"
+                    width={20}
+                    height={20}
                   />
                   {language.name}
                 </SelectComponent.Item>
@@ -182,7 +188,12 @@ export default function FirstNavbar() {
             </Menu>
           </Box>
           <Box sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}>
-            <img src="/assets/images/Logo2.png" alt="logo" />
+            <Image
+              src="/assets/images/Logo2.png"
+              alt="logo"
+              width={48}
+              height={48}
+            />
           </Box>
           <Typography
             variant="h5"

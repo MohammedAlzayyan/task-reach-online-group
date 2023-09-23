@@ -2,6 +2,7 @@ import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 
 import { Box } from "@mui/material";
+import Image from "next/image";
 
 const itemData = [
   {
@@ -39,13 +40,15 @@ const ImageListComponent = () => {
             cols={item.cols || 1}
             rows={item.rows || 1}
           >
-            <img
-              // {...srcset(item.img, 121, item.rows, item.cols)}
+            <Image
               src={item.img}
               alt={item.title}
-              //   width={121}
-              //   height={121}
-              //   loading="lazy"
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+              width={500}
+              height={200}
             />
           </ImageListItem>
         ))}

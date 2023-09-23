@@ -1,6 +1,6 @@
-import type { SvgType } from "../../types";
+// import type { SvgType } from "../../types";
 
-export const NotificationIcon: SvgType = (props) => {
+export const NotificationIcon = (props: any) => {
   return (
     <svg
       width="29"

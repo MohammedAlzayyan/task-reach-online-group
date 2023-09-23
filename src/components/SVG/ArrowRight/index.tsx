@@ -1,6 +1,6 @@
-import type { SvgType } from "../../types";
+// import type { SvgType } from "../../types";
 
-export const ArrowRightIcon: SvgType = (props) => {
+export const ArrowRightIcon = (props: any) => {
   return (
     <svg
       width="16"

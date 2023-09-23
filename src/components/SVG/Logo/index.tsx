@@ -1,6 +1,6 @@
-import type { SvgType } from "../../types";
+// import type { SvgType } from "../../types";
 
-export const LogoIcon: SvgType = (props) => {
+export const LogoIcon = (props: any) => {
   return (
     <svg
       width="48"

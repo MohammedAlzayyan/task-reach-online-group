@@ -1,6 +1,6 @@
-import type { SvgType } from "../../types";
+// import type { SvgType } from "../../types";
 
-export const LikeIcon: SvgType = (props) => {
+export const LikeIcon = (props: any) => {
   return (
     <svg
       width="29"

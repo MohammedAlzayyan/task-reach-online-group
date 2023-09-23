@@ -10,6 +10,7 @@ import { Box, Typography } from "@mui/material";
 
 // import required modules
 import { Pagination, Navigation } from "swiper/modules";
+import Image from "next/image";
 
 export const TestSwiper = () => {
   const slides2 = [
@@ -53,7 +54,12 @@ export const TestSwiper = () => {
           <Box sx={{ px: 20 }} key={index}>
             <SwiperSlide style={{ transform: "none !important" }}>
               <Box sx={{ flexGrow: 1 }}>
-                <img src={slide} alt={`Slide ${index}`} />
+                <Image
+                  src={slide}
+                  alt={`Slide ${index}`}
+                  width={150}
+                  height={150}
+                />
                 <Typography
                   sx={{ fontSize: "20px", fontWeight: 600, color: "#151875" }}
                 >

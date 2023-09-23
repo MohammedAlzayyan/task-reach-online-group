@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import "./style.css";
 
 import { Navigation, Pagination, History } from "swiper/modules";
+import Image from "next/image";
 
 type SwiperComponentProps = {
   slides: string[];
@@ -40,7 +41,7 @@ const SwiperComponent = ({
     >
       {slides.map((slide: string, index: number) => (
         <SwiperSlide key={index}>
-          <img src={slide} alt={`Slide ${index}`} />
+          <Image src={slide} alt={`Slide ${index}`} width={400} height={180} />
         </SwiperSlide>
       ))}
     </Swiper>

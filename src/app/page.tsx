@@ -10,9 +10,9 @@ import ArrowRightIcon from "@/components/SVG/ArrowRight";
 
 export default function Home() {
   const slides = [
-    "../assets/images/placeholder3.png",
-    "../assets/images/placeholder1.png",
-    "../assets/images/placeholder2.png",
+    "/assets/images/placeholder3.png",
+    "/assets/images/placeholder1.png",
+    "/assets/images/placeholder2.png",
   ];
   return (
     <main>

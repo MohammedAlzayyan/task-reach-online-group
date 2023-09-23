@@ -1,6 +1,6 @@
-import type { SvgType } from "../../types";
+// import type { SvgType } from "../../types";
 
-export const CartIcon: SvgType = (props) => {
+export const CartIcon = (props: any) => {
   return (
     <svg
       width="29"
